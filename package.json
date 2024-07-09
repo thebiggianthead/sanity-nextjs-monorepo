@@ -1,0 +1,63 @@
+{
+  "name": "sanity-next-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:clean": "turbo dev:clean",
+    "build": "turbo build",
+    "start": "turbo start",
+    "fix:js": "turbo fix:eslint",
+    "lint": "turbo lint",
+    "lint:css": "turbo lint:css",
+    "lint:js": "turbo lint:js",
+    "prepare": "husky",
+    "typegen": "turbo typegen"
+  },
+  "packageManager": "pnpm@9.5.0",
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": [
+      "eslint --cache"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "syncpack": {
+    "lintFormatting": false,
+    "lintSemverRanges": false,
+    "lintVersions": true,
+    "versionGroups": [
+      {
+        "label": "Use 'workspace:*' for local packages",
+        "pinVersion": "workspace:*",
+        "dependencies": [
+          "$LOCAL"
+        ],
+        "dependencyTypes": [
+          "dev",
+          "prod"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "next": "^14.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.14.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "syncpack": "^12.3.3",
+    "turbo": "^2.0.6",
+    "typescript": "5.5.3"
+  }
+}

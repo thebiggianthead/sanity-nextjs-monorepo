@@ -1,0 +1,29 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:clean": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "outputs": [".next/**", ".sanity/**", "dist/**"]
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "fix:eslint": {},
+    "fix:prettier": {},
+    "lint": {},
+    "lint:css": {},
+    "lint:js": {},
+    "typegen": {
+      "cache": false
+    }
+  }
+}

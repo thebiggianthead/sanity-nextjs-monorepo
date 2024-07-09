@@ -1,0 +1,24 @@
+{
+  "name": "studio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start",
+    "lint": "turbo run lint:js",
+    "lint:js": "eslint '**/*.{js,jsx,mjs,ts,tsx}' --quiet --cache",
+    "typegen": "sanity schema extract && sanity typegen generate"
+  },
+  "dependencies": {
+    "@repo/sanity-config": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.49.0",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "eslint": "^8.57.0"
+  }
+}
