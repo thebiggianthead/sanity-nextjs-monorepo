@@ -28,7 +28,7 @@ const homeLocation = {
 export default defineConfig({
   dataset: DATASET,
   projectId: PROJECT_ID,
-  basePath: "/test",
+  basePath: "/studio",
   schema: {
     types: [
       // Singletons

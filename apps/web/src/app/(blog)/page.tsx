@@ -1,8 +1,7 @@
+import * as demo from "@/packages/sanity-config/src/lib/demo";
 import type { HeroQueryResult, SettingsQueryResult } from "@/sanity.types";
 import Link from "next/link";
 import { Suspense } from "react";
-
-import * as demo from "../../../../packages/sanity-config/src/lib/demo";
 
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";

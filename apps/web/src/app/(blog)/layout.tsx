@@ -1,5 +1,6 @@
 import "../globals.css";
 
+import * as demo from "@/packages/sanity-config/src/lib/demo";
 import type { SettingsQueryResult } from "@/sanity.types";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -11,8 +12,6 @@ import {
   type PortableTextBlock,
 } from "next-sanity";
 import { Suspense } from "react";
-
-import * as demo from "../../../../packages/sanity-config/src/lib/demo";
 
 import AlertBanner from "./alert-banner";
 import PortableText from "./portable-text";
